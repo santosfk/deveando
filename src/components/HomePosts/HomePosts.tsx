@@ -14,7 +14,7 @@ export default function HomePosts() {
       <BigPost>
         {documents?.results.map((item, index) => {
           const dataTitle = item.data.title[0].text;
-          const dataImg = item.data.image[0].text;
+          const dataImg = item.data.image.url;
           if (index === 0) {
             return (
               <Post size="bg" key={index} title={dataTitle} img={dataImg} />
@@ -24,8 +24,10 @@ export default function HomePosts() {
       </BigPost>
       <SmallPosts>
         {documents?.results.map((item, index) => {
+          console.log(item.data);
           const dataTitle = item.data.title[0].text;
-          const dataImg = item.data.image[0].text;
+          const dataImg = item.data.image.url;
+          console.log(dataImg);
           if (index > 0) {
             return <Post key={index} size="" title={dataTitle} img={dataImg} />;
           }
