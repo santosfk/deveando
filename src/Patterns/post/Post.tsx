@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { Container, ImageContent } from "./style";
+import { Container, Title, ImageContent } from "./style";
 
 type Props = {
   size: string;
@@ -10,10 +10,16 @@ type Props = {
 export default function Post({ size, title, img }: Props) {
   return (
     <Container size={size}>
-      <h1>{title}</h1>
-      <ImageContent>
-        <Image src={img} width={30} height={30} alt="" />
-      </ImageContent>
+      <Title size={size}>{title}</Title>
+
+      <ImageContent
+        size={size}
+        src={img}
+        style={{
+          position: "absolute",
+        }}
+        alt=""
+      />
     </Container>
   );
 }
