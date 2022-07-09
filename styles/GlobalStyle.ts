@@ -9,4 +9,6 @@ export default createGlobalStyle`
 
   body {
     font: 400 16px Roboto, sans-serif;
+    height: 100%;
+    width: 100%;
   }`;
