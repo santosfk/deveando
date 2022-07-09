@@ -5,7 +5,8 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 6rem;
+  padding-bottom: 3rem;
+  gap: 3rem;
 `;
 export const BigPost = styled.div``;
 export const SmallPosts = styled.div`
