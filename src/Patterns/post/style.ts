@@ -6,6 +6,11 @@ export const Container = styled.div<{
   width: ${({ size }) => (size === "bg" ? "1000px" : "300px")};
   height: ${({ size }) => (size === "bg" ? "390px" : "200px")};
   position: relative;
+  transition: 0.5s;
+  :hover {
+    width: ${({ size }) => (size === "bg" ? "1010px" : "310px")};
+    height: ${({ size }) => (size === "bg" ? "400px" : "210px")};
+  }
 `;
 export const Title = styled.h1<{
   size: string;
@@ -30,8 +35,4 @@ export const ImageContent = styled.img<{
   border-radius: 1.2rem;
   object-fit: cover;
   transition: 0.5s;
-  :hover {
-    width: 102%;
-    height: 102%;
-  }
 `;
