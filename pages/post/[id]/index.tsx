@@ -4,7 +4,7 @@ import type { NextPage } from "next";
 import { useSelector } from "react-redux";
 import { Container, HeaderContainer } from "../../../styles/pages/Post";
 import Post from "../../../src/Patterns/post/Post";
-import Header from "../../../src/components/header/Header";
+import Header from "../../../src/components/Header/Header";
 const OpenPost: NextPage = () => {
   const router = useRouter();
   const { id } = router.query;
