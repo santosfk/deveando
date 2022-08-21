@@ -9,13 +9,13 @@ export const RegisterModal = ({ setModalIsOpen }: Props) => {
     setModalIsOpen(false);
   };
   const { data: session } = useSession();
-  console.log(session);
+  const imgSrc = session?.user?.image ? session?.user?.image : ''
   return (
     <>
       {session?.user ? (
         <LoggedContainer>
           <XSquare size={42} weight="fill"  className="close-icon" onClick={handleCloseModal} />
-          <PerfilImg src={session?.user?.image} alt="imagem de perfil" />
+          <PerfilImg src={imgSrc} alt="imagem de perfil" />
           <h1>{session?.user?.name}</h1>
           <span>
             Quando um novo post você será notificado no email :{" "}
