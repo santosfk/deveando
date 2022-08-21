@@ -20,6 +20,9 @@ export const RegisterModal = ({ setModalIsOpen }: Props) => {
             Quando um novo post você será notificado no email :{" "}
             {session?.user?.email}
           </span>
+          <Button color="#D61E2D" onClick={()=>signOut() }>
+            Sair
+          </Button>
         </LoggedContainer>
       ) : (
         <Container>

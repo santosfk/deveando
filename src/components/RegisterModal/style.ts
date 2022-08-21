@@ -57,11 +57,15 @@ justify-content: center;
 gap: 1rem;
 span{
     text-align: center;
-    font-size: 1rem;
+    font-size: .7rem;
+    color: #3CB57A;
+    width: 300px;
 }
 `
 export const PerfilImg = styled.img`
 width: 100px;
 height: 100px;
 border-radius: 50%;
+border: 2px solid black;
+outline: 2px solid  #3CB57A;
 `
