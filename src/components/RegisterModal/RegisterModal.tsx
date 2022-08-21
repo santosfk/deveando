@@ -2,7 +2,7 @@ import React from "react";
 import { Props } from "./type";
 import { useSession, signIn, signOut, getSession } from "next-auth/react";
 import { Container, Title, Button, LoggedContainer, PerfilImg } from "./style";
-import { GithubLogo } from "phosphor-react";
+import { GithubLogo,XSquare } from "phosphor-react";
 import { GetServerSideProps } from "next/types";
 export const RegisterModal = ({ setModalIsOpen }: Props) => {
   const handleCloseModal = () => {
@@ -14,6 +14,7 @@ export const RegisterModal = ({ setModalIsOpen }: Props) => {
     <>
       {session?.user ? (
         <LoggedContainer>
+          <XSquare size={42} weight="fill"  className="close-icon" onClick={handleCloseModal} />
           <PerfilImg src={session?.user?.image} alt="imagem de perfil" />
           <h1>{session?.user?.name}</h1>
           <span>
