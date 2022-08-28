@@ -2,26 +2,36 @@ import React from "react";
 import { Props } from "./type";
 import { useSession, signIn, signOut, getSession } from "next-auth/react";
 import { Container, Title, Button, LoggedContainer, PerfilImg } from "./style";
-import { GithubLogo,XSquare } from "phosphor-react";
+import { GithubLogo, XSquare } from "phosphor-react";
 import { GetServerSideProps } from "next/types";
-export const RegisterModal = ({ setModalIsOpen }: Props) => {
+
+export const RegisterModal = ({ setModalIsOpen, modalIsOpen }: Props) => {
   const handleCloseModal = () => {
     setModalIsOpen(false);
   };
   const { data: session } = useSession();
-  const imgSrc = session?.user?.image ? session?.user?.image : ''
+  const imgSrc = session?.user?.image ? session?.user?.image : "";
+  const variants = {
+    open: { opacity: 1, x: 0 },
+    closed: { opacity: 1, x: "-100rem", scale: 0.3 },
+  };
   return (
     <>
       {session?.user ? (
         <LoggedContainer>
-          <XSquare size={42} weight="fill"  className="close-icon" onClick={handleCloseModal} />
+          <XSquare
+            size={42}
+            weight="fill"
+            className="close-icon"
+            onClick={handleCloseModal}
+          />
           <PerfilImg src={imgSrc} alt="imagem de perfil" />
           <h1>{session?.user?.name}</h1>
           <span>
             Quando um novo post você será notificado no email :{" "}
             {session?.user?.email}
           </span>
-          <Button color="#D61E2D" onClick={()=>signOut() }>
+          <Button color="#D61E2D" onClick={() => signOut()}>
             Sair
           </Button>
         </LoggedContainer>

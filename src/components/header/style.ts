@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 export const Container = styled.div`
   width: 100%;
   display: flex;
@@ -10,6 +9,10 @@ export const Container = styled.div`
   .user-icon{
     margin-top: -8rem;
     color: white;
+  }
+  .modal-wrapper{
+    position: relative;
+    z-index: 4;
   }
 `;
 export const ImgContent = styled.div`
