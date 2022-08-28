@@ -1,14 +1,14 @@
 import styled from "styled-components";
-
-export const Container = styled.div`
+import { motion } from "framer-motion";
+export const Container=styled.div`
   width: 30rem;
   height: 18rem;
   background-color: white;
   position: absolute;
   border-radius: 5px;
-  left: 33rem;
+  z-index:4;
+  left: 30rem;
   top: 5rem;
-  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,26 +41,26 @@ export const Button = styled.button<{
     color: #111111;
   }
 `;
-export const LoggedContainer = styled.div`
+export const LoggedContainer=styled.div`
   width: 32rem;
   height: 22rem;
   background-color: white;
   position: absolute;
   border-radius: 5px;
-  left: 33rem;
+  z-index: 4;
+  left: 30rem;
   top: 5rem;
-  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1rem;
   .close-icon {
-    margin-right: -29rem;
-    margin-top: -3rem;
+     margin-right: -29rem;
+    margin-top: -3rem; 
     cursor: pointer;
-    color:black;
-    transition: .5s;
+    color: black;
+    transition: 0.5s;
   }
   .close-icon:hover {
     color: #d61e2d;

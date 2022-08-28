@@ -13,15 +13,12 @@ export const RegisterModal = ({ setModalIsOpen, modalIsOpen }: Props) => {
   const imgSrc = session?.user?.image ? session?.user?.image : "";
   const variants = {
     open: { opacity: 1, x: 0 },
-    closed: { opacity: 0, x: "-100%" },
+    closed: { opacity: 1, x: "-100rem", scale: 0.3 },
   };
   return (
     <>
       {session?.user ? (
-        <LoggedContainer
-        animate={modalIsOpen?'open':'closed'}
-        variants={variants}
-        >
+        <LoggedContainer>
           <XSquare
             size={42}
             weight="fill"
@@ -39,10 +36,7 @@ export const RegisterModal = ({ setModalIsOpen, modalIsOpen }: Props) => {
           </Button>
         </LoggedContainer>
       ) : (
-        <Container
-        animate={modalIsOpen?'open':'closed'}
-        variants={variants}
-        >
+        <Container>
           <Title>Faça login Aqui!!</Title>
           <span>{}</span>
           <span>dev utiliza o github</span>

@@ -7,14 +7,16 @@ import { UserFocus } from "phosphor-react";
 import { RegisterModal } from "../RegisterModal";
 import { getSession, useSession } from "next-auth/react";
 import { GetServerSideProps } from "next";
+import { AnimatePresence } from "framer-motion"
+import { motion } from "framer-motion"
 export default function Header() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const handleModalIsOpen = () => {
     setModalIsOpen(!modalIsOpen);
   };
   const variants = {
-    open: { opacity: 1, x: 0 },
-    closed: { opacity: 0, x: "-100vh" },
+    open: { opacity: 1,y:0},
+    closed: { opacity: 0,scale:0.3,y:"-10rem" },
   };
 
   return (
@@ -22,6 +24,20 @@ export default function Header() {
     
 
       <ImgContent>
+
+ <motion.div
+ className="modal-wrapper"
+ variants={variants}
+ animate={modalIsOpen? 'open':'closed'}
+ >
+
+   <RegisterModal
+    setModalIsOpen={setModalIsOpen}
+    modalIsOpen={modalIsOpen}
+  /> 
+ </motion.div>
+
+      
         <Link href="/">
           <Image src={header} />
         </Link>
@@ -32,10 +48,6 @@ export default function Header() {
         weight="fill"
         onClick={handleModalIsOpen}
       />
-         <RegisterModal
-          setModalIsOpen={setModalIsOpen}
-          modalIsOpen={modalIsOpen}
-        /> 
     </Container>
   );
 }
