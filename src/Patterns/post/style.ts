@@ -11,6 +11,20 @@ export const Container = styled.div<{
     width: ${({ size }) => (size === "bg" ? "1010px" : "310px")};
     height: ${({ size }) => (size === "bg" ? "400px" : "210px")};
   }
+  @media (max-width: 1024px) {
+    width: ${({ size }) => (size === "bg" ? "900px" : "300px")};
+  }
+  @media (max-width: 991px){
+    width: ${({ size }) => (size === "bg" ? "700px" : "300px")};
+  }
+  @media (max-width: 540px){
+    width: ${({ size }) => (size === "bg" ? "400px" : "300px")};
+    height: ${({ size }) => (size === "bg" ? "250px" : "200px")};
+  }
+  @media (max-width: 375px){
+    width: ${({ size }) => (size === "bg" ? "270px" : "270px")};
+    height: ${({ size }) => (size === "bg" ? "150px" : "150px")};
+  }
 `;
 export const Title = styled.h1<{
   size: string;
@@ -26,6 +40,9 @@ export const Title = styled.h1<{
   height: ${({ size }) => (size === "bg" ? "3rem" : "2rem")};
   font-size: ${({ size }) => (size === "bg" ? "2rem" : "1.5rem")};
   border-radius: 0px 0px 19.8396px 19.8396px;
+  @media (max-width: 375px){
+    font-size: ${({ size }) => (size === "bg" ? "1.5rem" : "1.5rem")};
+  }
 `;
 export const ImageContent = styled.img<{
   size: string;

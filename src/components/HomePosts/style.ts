@@ -6,7 +6,10 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-around;
   padding-bottom: 3rem;
-  gap: 3rem;
+  gap: 10rem;
+  @media (max-width:2000px){
+    gap: 3rem;
+  }
 `;
 export const BigPost = styled.div``;
 export const SmallPosts = styled.div`
@@ -15,4 +18,7 @@ export const SmallPosts = styled.div`
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 3rem;
+  @media (max-width:1024px) {
+    gap: 1rem;
+  }
 `;
