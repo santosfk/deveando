@@ -2,7 +2,7 @@ import React from "react";
 import { useRouter } from "next/router";
 import type { NextPage } from "next";
 import { useSelector } from "react-redux";
-import { Container, HeaderContainer } from "../../../styles/pages/Post";
+import { Container, PostContainer } from "../../../styles/pages/Post";
 import Post from "../../../src/Patterns/post/Post";
 import Header from "../../../src/components/header/Header";
 const OpenPost: NextPage = () => {
@@ -13,10 +13,10 @@ const OpenPost: NextPage = () => {
   );
   return (
     <Container>
-      <HeaderContainer>
-        <Header />
-      </HeaderContainer>
-      <Post size="bg" title={title} img={img} description="" />
+      <Header />
+      <PostContainer>
+        <Post size="bg" title={title} img={img} description="" />
+      </PostContainer>
       <span>{description}</span>
     </Container>
   );
