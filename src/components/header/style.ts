@@ -6,13 +6,18 @@ export const Container = styled.div`
   justify-content: space-between;
   height: 12rem;
   padding: 0rem 3rem;
-  .user-icon{
+  .user-icon {
     margin-top: -8rem;
     color: white;
   }
-  .modal-wrapper{
+  .modal-wrapper {
     position: relative;
     z-index: 4;
+  }
+  @media (max-width: 320px) {
+    .user-icon {
+      margin-right: -2rem;
+    }
   }
 `;
 export const ImgContent = styled.div`

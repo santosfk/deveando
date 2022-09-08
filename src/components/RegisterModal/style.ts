@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
-export const Container=styled.div`
+export const Container = styled.div`
   width: 30rem;
   height: 18rem;
   background-color: white;
   position: absolute;
   border-radius: 5px;
-  z-index:4;
-  left: 30rem;
+  z-index: 4;
+  left: 60rem;
   top: 5rem;
   display: flex;
   flex-direction: column;
@@ -15,6 +15,41 @@ export const Container=styled.div`
   justify-content: space-evenly;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border: 1px solid #3cb57a;
+  @media (max-width: 2000px) {
+    left: 30rem;
+  }
+  @media (max-width: 1280px) {
+    left: 25rem;
+  }
+  @media (max-width: 1024px) {
+    left: 16rem;
+  }
+  @media (max-width: 991px) {
+    left: 12rem;
+  }
+  @media (max-width: 820px) {
+    left: 9rem;
+  }
+  @media (max-width: 768px) {
+    left: 6rem;
+  }
+  @media (max-width: 540px) {
+    left: 0;
+    transform: scale(0.8);
+  }
+  @media (max-width: 425px) {
+    width: 24rem;
+    margin-left: -1.5rem;
+  }
+  @media (max-width: 395px) {
+    margin-left: -2.2rem;
+  }
+  @media (max-width: 375px) {
+    margin-left: -2.6rem;
+  }
+  @media (max-width: 320px) {
+    margin-left: -5rem;
+  }
 `;
 export const Title = styled.h1`
   text-transform: uppercase;
@@ -41,7 +76,7 @@ export const Button = styled.button<{
     color: #111111;
   }
 `;
-export const LoggedContainer=styled.div`
+export const LoggedContainer = styled.div`
   width: 32rem;
   height: 22rem;
   background-color: white;
@@ -56,8 +91,8 @@ export const LoggedContainer=styled.div`
   justify-content: center;
   gap: 1rem;
   .close-icon {
-     margin-right: -29rem;
-    margin-top: -3rem; 
+    margin-right: -29rem;
+    margin-top: -3rem;
     cursor: pointer;
     color: black;
     transition: 0.5s;
