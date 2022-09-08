@@ -8,11 +8,9 @@ export const Container = styled.div`
   background: linear-gradient(180deg, #010030 0%, #7ae8e1 123.83%);
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 `;
-export const HeaderContainer = styled.div`
-  width: 100%;
-  position: fixed;
-  top: 0;
+export const PostContainer = styled.div`
+  margin-top: -12rem;
 `;
