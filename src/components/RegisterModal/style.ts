@@ -83,7 +83,7 @@ export const LoggedContainer = styled.div`
   position: absolute;
   border-radius: 5px;
   z-index: 4;
-  left: 30rem;
+  left: 60rem;
   top: 5rem;
   display: flex;
   flex-direction: column;
@@ -105,6 +105,41 @@ export const LoggedContainer = styled.div`
     font-size: 0.7rem;
     color: #3cb57a;
     width: 300px;
+  }
+  @media (max-width: 2000px) {
+    left: 30rem;
+  }
+  @media (max-width: 1280px) {
+    left: 25rem;
+  }
+  @media (max-width: 1024px) {
+    left: 16rem;
+  }
+  @media (max-width: 991px) {
+    left: 12rem;
+  }
+  @media (max-width: 820px) {
+    left: 9rem;
+  }
+  @media (max-width: 768px) {
+    left: 6rem;
+  }
+  @media (max-width: 540px) {
+    left: 0;
+    transform: scale(0.8);
+  }
+  @media (max-width: 425px) {
+    width: 24rem;
+    margin-left: -1.5rem;
+  }
+  @media (max-width: 395px) {
+    margin-left: -2.2rem;
+  }
+  @media (max-width: 375px) {
+    margin-left: -2.6rem;
+  }
+  @media (max-width: 320px) {
+    margin-left: -5rem;
   }
 `;
 export const PerfilImg = styled.img`
