@@ -137,6 +137,9 @@ export const LoggedContainer = styled.div`
   }
   @media (max-width: 375px) {
     margin-left: -2.6rem;
+    .close-icon {
+      margin-right: -20rem;
+    }
   }
   @media (max-width: 320px) {
     margin-left: -5rem;
