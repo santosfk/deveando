@@ -7,8 +7,9 @@ export const Container = styled.div`
   position: absolute;
   border-radius: 5px;
   z-index: 4;
-  left: 60rem;
-  top: 5rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -83,8 +84,9 @@ export const LoggedContainer = styled.div`
   position: absolute;
   border-radius: 5px;
   z-index: 4;
-  left: 60rem;
-  top: 5rem;
+  left: 50%;
+  top: 50%;
+  transform: translate(0, 50%);
   display: flex;
   flex-direction: column;
   align-items: center;

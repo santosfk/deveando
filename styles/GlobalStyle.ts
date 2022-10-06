@@ -6,8 +6,9 @@ export default createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
-
+  
   body {
+    background: linear-gradient(180deg, #010030 0%, #7ae8e1 123.83%);
     font: 400 16px Roboto, sans-serif;
     height: 100%;
     width: 100%;
