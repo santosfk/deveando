@@ -3,14 +3,12 @@ import Image from "next/image";
 export const Container = styled.div<{
   size: string;
 }>`
+  cursor: pointer;
   width: ${({ size }) => (size === "bg" ? "1000px" : "300px")};
   height: ${({ size }) => (size === "bg" ? "390px" : "200px")};
   position: relative;
   transition: 0.5s;
-  :hover {
-    width: ${({ size }) => (size === "bg" ? "1010px" : "310px")};
-    height: ${({ size }) => (size === "bg" ? "400px" : "210px")};
-  }
+
   @media (max-width: 1024px) {
     width: ${({ size }) => (size === "bg" ? "900px" : "300px")};
   }
@@ -33,15 +31,18 @@ export const Title = styled.h1<{
   size: string;
 }>`
   position: absolute;
+  text-transform: uppercase;
   z-index: 2;
   bottom: 0;
   background: rgba(1, 0, 48, 0.52);
   width: 100%;
   color: white;
   text-align: left;
-  padding: 0 3rem;
-  height: ${({ size }) => (size === "bg" ? "3rem" : "2rem")};
-  font-size: ${({ size }) => (size === "bg" ? "2rem" : "1.5rem")};
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  height: ${({ size }) => (size === "bg" ? "2.5rem" : "2rem")};
+  font-size: ${({ size }) => (size === "bg" ? "1.7rem" : "1.2rem")};
   border-radius: 0px 0px 19.8396px 19.8396px;
   @media (max-width: 375px) {
     font-size: ${({ size }) => (size === "bg" ? "1.5rem" : "1.5rem")};
@@ -55,4 +56,7 @@ export const ImageContent = styled.img<{
   border-radius: 1.2rem;
   object-fit: cover;
   transition: 0.5s;
+  :hover {
+    transform: scale(1.01);
+  }
 `;
