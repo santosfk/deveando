@@ -40,8 +40,8 @@ export const Title = styled.h1<{
   text-align: left;
   display: flex;
   align-items: center;
-  padding: 0 1rem;
-  height: ${({ size }) => (size === "bg" ? "2.5rem" : "2rem")};
+  padding: 0.5rem 1rem;
+  /* height: ${({ size }) => (size === "bg" ? "2.5rem" : "2rem")}; */
   font-size: ${({ size }) => (size === "bg" ? "1.7rem" : "1.2rem")};
   border-radius: 0px 0px 19.8396px 19.8396px;
   @media (max-width: 375px) {
