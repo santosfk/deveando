@@ -7,7 +7,7 @@ import { GetServerSideProps } from "next/types";
 import { collection, addDoc } from "firebase/firestore";
 import { database } from "../../service/firebaseConfig";
 
-export const RegisterModal = ({ setModalIsOpen, modalIsOpen }: Props) => {
+export const RegisterModal = ({  }: Props) => {
   const { data: session, status } = useSession();
   const imgSrc = session?.user?.image ? session?.user?.image : "";
   const userEmail = session?.user?.email;
@@ -16,7 +16,7 @@ export const RegisterModal = ({ setModalIsOpen, modalIsOpen }: Props) => {
     setEmailInDb();
   }, [userEmail]);
   const handleCloseModal = () => {
-    setModalIsOpen(false);
+   
   };
   const handleSignin = (provider: string) => {
     signIn(provider);

@@ -8,8 +8,9 @@ export default createGlobalStyle`
   }
   
   body {
-    background: linear-gradient(180deg, #010030 0%, #7ae8e1 123.83%);
-    font: 400 16px Roboto, sans-serif;
+    background: linear-gradient(180deg, #010030 0%, #7ae8e1 );
+    background-repeat:no-repeat;
+    font-family: Roboto, sans-serif;
     height: 100%;
     width: 100%;
   }`;

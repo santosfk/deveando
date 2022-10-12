@@ -4,19 +4,15 @@ export const Container = styled.div`
   width: 30rem;
   height: 18rem;
   background-color: white;
-  position: absolute;
   border-radius: 5px;
-  z-index: 4;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border: 1px solid #3cb57a;
-  @media (max-width: 2000px) {
+  /* @media (max-width: 2000px) {
     left: 30rem;
   }
   @media (max-width: 1280px) {
@@ -50,7 +46,7 @@ export const Container = styled.div`
   }
   @media (max-width: 320px) {
     margin-left: -5rem;
-  }
+  } */
 `;
 export const Title = styled.h1`
   text-transform: uppercase;
@@ -81,12 +77,7 @@ export const LoggedContainer = styled.div`
   width: 32rem;
   height: 22rem;
   background-color: white;
-  position: absolute;
   border-radius: 5px;
-  z-index: 4;
-  left: 50%;
-  top: 50%;
-  transform: translate(0, 50%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -108,7 +99,7 @@ export const LoggedContainer = styled.div`
     color: #3cb57a;
     width: 300px;
   }
-  @media (max-width: 2000px) {
+  /* @media (max-width: 2000px) {
     left: 30rem;
   }
   @media (max-width: 1280px) {
@@ -145,7 +136,7 @@ export const LoggedContainer = styled.div`
   }
   @media (max-width: 320px) {
     margin-left: -5rem;
-  }
+  } */
 `;
 export const PerfilImg = styled.img`
   width: 100px;

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React, { useEffect } from "react";
 import { Container, Title, ImageContent } from "./style";
-import { setInfo } from "../../redux/blogInfo/blogInfoSlice";
+import { setInfo } from "../../redux/blogInfoSlice";
 import Link from "next/link";
 type Props = {
   size: string;

@@ -1,4 +1,4 @@
 export interface Props {
-    setModalIsOpen :Function,
-    modalIsOpen : Boolean,
+    setModalIsOpen? :Function,
+    modalIsOpen? : Boolean,
 }
