@@ -6,7 +6,7 @@ import theme from "../styles/theme/theme";
 import { PrismicProvider } from "@prismicio/react";
 import { client } from "./api/prismic";
 import { Provider } from "react-redux";
-import store from "../src/redux/blogInfo/store";
+import store from "../src/redux/store";
 import { SessionProvider } from "next-auth/react"
 
 function MyApp({ Component, pageProps:{session,...pageProps} }: AppProps) {

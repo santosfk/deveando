@@ -10,10 +10,7 @@ export const Container = styled.div`
     margin-top: -8rem;
     color: white;
   }
-  .modal-wrapper {
-    position: relative;
-    z-index: 4;
-  }
+  
   @media (max-width: 320px) {
     .user-icon {
       margin-right: -2rem;
