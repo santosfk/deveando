@@ -3,16 +3,15 @@ import { motion } from "framer-motion";
 export const Container = styled.div`
 width:30rem;
   height: 18rem;
-  background-color: #010030;
+  background-color: #E9E9E9;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  border: 1px solid #3cb57a;
  span{
-  color: #7ae8e1;
+  color: #F20505;
   text-transform: uppercase;
   font-size: .8rem;
   font-weight: 400;
@@ -28,12 +27,13 @@ width:30rem;
 export const Title = styled.h1`
   text-transform: uppercase;
   font-weight: bold;
-  color: #edece6;
+  color: #A6034F;
   font-size: 1.4rem;
 
 `;
 export const Button = styled.button<{
-  color?: string;
+  bg?: string;
+  color?:string;
 }>`
   width: 220px;
   height: 40px;
@@ -44,20 +44,19 @@ export const Button = styled.button<{
   border-radius: 5px;
   padding: 0.5rem;
   font-weight: bold;
-  color: #edece6;
-  background-color: ${({ color }) => color};
+  color:${({color})=> (color? color:'white')};
+  background-color: ${({ bg }) => bg};
   text-transform: uppercase;
   cursor: pointer;
   transition: 0.6s;
-  :hover {
-    color: ${({color})=> (color === 'transparent')? 'red':"#010030"} ;
+  :hover{
+    background-color: ${({ bg })=> bg? 'transparent':'#E0E0E0'};
   }
 `;
 export const LoggedContainer = styled.div`
 width: 30rem;
   height: 20rem;
-  background-color: #010030;
-  border: 1px solid #3cb57a;
+  background-color: #E9E9E9;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -67,7 +66,7 @@ width: 30rem;
   gap: 1rem;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   h1{
-    color: #edece6;
+    color: #A6034F;
     text-transform: uppercase;
     font-size: 1.3rem;
   }
@@ -84,14 +83,14 @@ width: 30rem;
   span {
     text-align: center;
     font-size: 0.7rem;
-    color: #edece6;
+    color: #8A038C;
     font-weight: 600;
     width: 300px;
   }
   span>p{
     font-weight: bold;
     font-size: 1.2rem;
-    color: #7ae8e1;
+    color: #A6034F;
   }
 
   @media (max-width: 540px) {
@@ -110,5 +109,5 @@ export const PerfilImg = styled.img`
   height: 100px;
   border-radius: 50%;
   border: 2px solid black;
-  outline: 2px solid #7ae8e1;
+  outline: 2px solid #A6034F;
 `;

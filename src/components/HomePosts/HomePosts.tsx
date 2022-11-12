@@ -19,7 +19,6 @@ export default function HomePosts() {
     <Swiper
       spaceBetween={0}
       slidesPerView={1}
-      navigation
       modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
       pagination={{ clickable: true }}
       autoplay={{

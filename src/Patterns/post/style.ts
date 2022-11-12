@@ -35,9 +35,11 @@ export const Title = styled.h1<{
   text-transform: uppercase;
   z-index: 2;
   bottom: 0;
-  background: rgba(1, 0, 48, 0.52);
+  background: rgba(166, 3, 79, 0.52);
+  mix-blend-mode: normal;
+backdrop-filter: blur(5px);
   width: 100%;
-  color: white;
+  color: #E9E9E9;
   text-align: left;
   display: flex;
   align-items: center;

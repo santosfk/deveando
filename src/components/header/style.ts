@@ -7,7 +7,7 @@ export const Container = styled.div`
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 0.6rem 3rem;
   .user-icon {
-    color: #8A038C;
+    color: #A6034F;
   }
   
   @media (max-width: 320px) {
