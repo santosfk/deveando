@@ -4,11 +4,10 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 12rem;
-  padding: 0rem 3rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 0.6rem 3rem;
   .user-icon {
-    margin-top: -8rem;
-    color: white;
+    color: #8A038C;
   }
   
   @media (max-width: 320px) {
@@ -18,6 +17,6 @@ export const Container = styled.div`
   }
 `;
 export const ImgContent = styled.div`
-  width: 11rem;
-  height: 11rem;
+width: 80px;
+height: 80px;
 `;
