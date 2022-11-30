@@ -18,21 +18,17 @@ export default createGlobalStyle`
   body {
     .swiper-pagination-bullet {
  
-    background-color: red !important;
+    background-color: #A6034F !important;
   }
   .swiper-button-next:after,
   .swiper-rtl .swiper-button-prev:after {
-    color: red !important;
+    color: #A6034F !important;
   }
   .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
-    color: red !important;
+    color: #A6034F !important;
   }
 
-    background: linear-gradient(358deg, #010030, #52b9b3);
-    /* background-image: linear-gradient(0deg,#010030,#52b9b3,#010030,#52b9b3); */
-    background-size: 400% 400%;
-    animation: ${backgroundAnimation} 20s ease infinite;
-    background-repeat:no-repeat;
+    background-color:#E9E9E9;
     font-family: Roboto, sans-serif;
     height: 100%;
     width: 100%;

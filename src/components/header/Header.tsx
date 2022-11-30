@@ -23,7 +23,6 @@ export default function Header() {
 
 
   return (
-    <> 
     <Container>
       <ImgContent>
         <Link href="/">
@@ -37,6 +36,5 @@ export default function Header() {
         onClick={handleModalIsOpen}
       />
     </Container>
-    </>
   );
 }

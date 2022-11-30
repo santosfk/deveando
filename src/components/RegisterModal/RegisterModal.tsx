@@ -64,7 +64,7 @@ export const RegisterModal = ({  }: Props) => {
            Notificaremos você no seu email:{" "}
           <p>  {session?.user?.email}</p>
           </span>
-          <Button color="#D61E2D" onClick={() => signOut()}>
+          <Button  color="#D61E2D" onClick={() => signOut()}>
             Logout
           </Button>
         </LoggedContainer>
@@ -73,10 +73,10 @@ export const RegisterModal = ({  }: Props) => {
           <Title>Faça login Aqui!!</Title>
           <span>{}</span>
           <span>faça login com o github</span>
-          <Button color="#3CB57A" onClick={() => handleSignin("github")}>
+          <Button bg="#3CB57A" onClick={() => handleSignin("github")}>
             <GithubLogo size={70}  />
           </Button>
-          <Button  color="transparent" onClick={handleCloseModal}>
+          <Button color="red"  onClick={handleCloseModal}>
             fechar
           </Button>
         </Container>

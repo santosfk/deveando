@@ -3,6 +3,7 @@ import { usePrismicDocuments } from "@prismicio/react";
 import { Container, BigPost, SmallPosts, PostWrapper } from "./style";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
+import { motion } from "framer-motion"
 import Post from "../../Patterns/post/Post";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -18,11 +19,10 @@ export default function HomePosts() {
     <Swiper
       spaceBetween={0}
       slidesPerView={1}
-      navigation
       modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
       pagination={{ clickable: true }}
       autoplay={{
-        delay: 1500,
+        delay: 2000,
         disableOnInteraction: false,
       }}
       loop={true}
@@ -38,6 +38,9 @@ export default function HomePosts() {
         return (
           <SwiperSlide key={index}>
             <PostWrapper>
+            <motion.div
+        whileHover={{ scale: 1.1 }}
+      >
               <Post
                 size="bg"
                 title={dataTitle}
@@ -45,6 +48,7 @@ export default function HomePosts() {
                 key={index}
                 description={dataDescription}
               />{" "}
+                  </motion.div>
             </PostWrapper>
           </SwiperSlide>
         );
