@@ -66,9 +66,9 @@ width: 30rem;
   gap: 1rem;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   h1{
-    color: #A6034F;
+    color: black;
     text-transform: uppercase;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
   .close-icon {
     margin-right: -27rem;
@@ -83,14 +83,14 @@ width: 30rem;
   span {
     text-align: center;
     font-size: 0.7rem;
-    color: #8A038C;
+    color: black;
     font-weight: 600;
     width: 300px;
   }
   span>p{
     font-weight: bold;
-    font-size: 1.2rem;
-    color: #A6034F;
+    font-size: 1rem;
+    color: #d61e2d;
   }
 
   @media (max-width: 540px) {
@@ -105,9 +105,9 @@ width: 30rem;
   }
 `;
 export const PerfilImg = styled.img`
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
-  border: 2px solid black;
-  outline: 2px solid #A6034F;
+  border: 3px solid  #d61e2d;
+  outline: 2px solid black ;
 `;
