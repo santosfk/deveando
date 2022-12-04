@@ -1,39 +1,38 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
-export const Container = styled.div`
-width:30rem;
+export const Container = styled(motion.div)`
+width: 30rem;
   height: 18rem;
-  background-color: #E9E9E9;
+  padding: 1rem;
+  background-color: white;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
- span{
-  color: #F20505;
-  text-transform: uppercase;
-  font-size: .8rem;
-  font-weight: 400;
- }
+ box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
+  gap: 10px;
+position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important; 
   @media (max-width: 540px) {
     transform: scale(0.8);
   }
   @media (max-width: 425px) {
     width: 24rem;
-
   }
 `;
-export const Title = styled.h1`
+export const Title = styled(motion.h1)`
   text-transform: uppercase;
   font-weight: bold;
-  color: #A6034F;
+  color: #282121;
   font-size: 1.4rem;
-
 `;
-export const Button = styled.button<{
+export const Button = styled(motion.button)<{
   bg?: string;
-  color?:string;
+  color?: string;
 }>`
   width: 220px;
   height: 40px;
@@ -44,70 +43,28 @@ export const Button = styled.button<{
   border-radius: 5px;
   padding: 0.5rem;
   font-weight: bold;
-  color:${({color})=> (color? color:'white')};
+  color: ${({ color }) => (color ? color : "white")};
   background-color: ${({ bg }) => bg};
   text-transform: uppercase;
   cursor: pointer;
   transition: 0.6s;
-  :hover{
-    background-color: ${({ bg })=> bg? 'transparent':'#E0E0E0'};
-  }
 `;
-export const LoggedContainer = styled.div`
-width: 30rem;
-  height: 20rem;
-  background-color: #E9E9E9;
-  border-radius: 5px;
+export const ButtonWrapper = styled(motion.div)`
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  gap: 1rem;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  h1{
-    color: black;
-    text-transform: uppercase;
-    font-size: 1.1rem;
-  }
-  .close-icon {
-    margin-right: -27rem;
-    /* margin-top: -3rem; */
-    cursor: pointer;
-    color: #d61e2d;
-    transition: 0.5s;
-  }
-  .close-icon:hover {
-    color: #DE2D1D;
-  }
-  span {
-    text-align: center;
-    font-size: 0.7rem;
-    color: black;
-    font-weight: 600;
-    width: 300px;
-  }
-  span>p{
-    font-weight: bold;
-    font-size: 1rem;
-    color: #d61e2d;
-  }
-
-  @media (max-width: 540px) {
-    left: 0;
-    transform: scale(0.8);
-  }
-  @media (max-width: 425px) {
-    width: 24rem;
-    .close-icon{
-      margin-right: -22rem;
-    }
-  }
+  justify-content: flex-end;
 `;
-export const PerfilImg = styled.img`
+export const EmailContent = styled(motion.span)`
+  color: #f20505;
+  text-transform: uppercase;
+  background-color:rgba(0, 0, 0, 0.24) ;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 1rem;
+  border-radius: 5px;
+`;
+export const PerfilImg = styled(motion.img)`
   width: 80px;
   height: 80px;
-  border-radius: 50%;
-  border: 3px solid  #d61e2d;
-  outline: 2px solid black ;
+  border-radius: 10px;
 `;
