@@ -22,9 +22,8 @@ export default function Post({ size, title, img, description }: Props) {
     dispatch(setInfo(dataPost));
   };
   return (
- 
     <Link href={`post/${title}`}>
-      <Container  size={size} onClick={() => setDataPost()}>
+      <Container size={size} onClick={() => setDataPost()}>
         <Title size={size}>{title}</Title>
         <ImageContent
           size={size}
@@ -36,6 +35,5 @@ export default function Post({ size, title, img, description }: Props) {
         />
       </Container>
     </Link>
-  
   );
 }
