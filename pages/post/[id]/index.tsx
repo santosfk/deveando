@@ -17,11 +17,11 @@ const OpenPost: NextPage = () => {
       <Header />
 
       <Container>
-      <Post size="bg" title={title} img={img} description="" />
-      <span>{description}</span>
-      <RegisterModal />
-    </Container>
-
+        <Post size="bg" title={title} img={img} description="" />
+        <span>{description}</span>
+        <RegisterModal />
+      </Container>
+    </>
   );
 };
 export default OpenPost;
