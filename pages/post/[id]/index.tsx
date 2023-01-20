@@ -12,13 +12,15 @@ const OpenPost: NextPage = () => {
     (state: any) => state.blogInfo
   );
   return (
-    <Container>
+    <>
       <Header />
-      <PostContainer>
-        <Post size="bg" title={title} img={img} description="" />
-      </PostContainer>
-      <span>{description}</span>
-    </Container>
+      <Container>
+        <PostContainer>
+          <Post size="bg" title={title} img={img} description="" />
+        </PostContainer>
+        <span>{description}</span>
+      </Container>
+    </>
   );
 };
 export default OpenPost;
