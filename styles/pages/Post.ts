@@ -21,4 +21,4 @@ export const Container = styled.div`
     opacity: 0.8;
   }
 `;
-export const PostContainer = styled.div``;
+
