@@ -1,16 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const modalInitialState = {
- isOn : false
+  isOn: false,
 };
 export const slice = createSlice({
   name: "modalSlice",
   initialState: modalInitialState,
   reducers: {
-    setModalState(state,) {
+    setModalState(state, { payload }) {
       return {
         ...state,
-       isOn:!state.isOn
+        isOn: payload,
       };
     },
   },
