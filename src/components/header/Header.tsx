@@ -14,13 +14,10 @@ import { setModalState } from "../../redux/modalSlice";
 
 export default function Header() {
   const dispatch = useDispatch();
-  
-  
+
   const handleModalIsOpen = () => {
-    dispatch(setModalState());
+    dispatch(setModalState(true));
   };
-
-
 
   return (
     <Container>
