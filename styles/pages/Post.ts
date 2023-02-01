@@ -9,7 +9,7 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 3rem;
+  padding-bottom: 3rem;
   span {
     margin-top: 10px;
     max-width: 1000px;
@@ -21,4 +21,8 @@ export const Container = styled.div`
     opacity: 0.8;
   }
 `;
-
+export const PostContainer = styled.div``;
+export const HeadContainer = styled.div`
+  width: 100%;
+  margin-bottom: 3rem;
+`;
