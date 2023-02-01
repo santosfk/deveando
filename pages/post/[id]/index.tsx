@@ -2,7 +2,11 @@ import React from "react";
 import { useRouter } from "next/router";
 import type { NextPage } from "next";
 import { useSelector } from "react-redux";
-import { Container } from "../../../styles/pages/Post";
+import {
+  Container,
+  HeadContainer,
+  PostContainer,
+} from "../../../styles/pages/Post";
 import Post from "../../../src/Patterns/post/Post";
 import Header from "../../../src/components/header/Header";
 import { RegisterModal } from "../../../src/components/RegisterModal";
@@ -14,10 +18,13 @@ const OpenPost: NextPage = () => {
   );
   return (
     <>
-      <Header />
-
       <Container>
-        <Post size="bg" title={title} img={img} description="" />
+        <HeadContainer>
+          <Header />
+        </HeadContainer>
+        <PostContainer>
+          <Post size="bg" title={title} img={img} description="" />
+        </PostContainer>
         <span>{description}</span>
         <RegisterModal />
       </Container>
