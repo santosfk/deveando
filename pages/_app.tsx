@@ -2,7 +2,7 @@ import "../styles/GlobalStyle.ts";
 import type { AppProps } from "next/app";
 import GlobalStyle from "../styles/GlobalStyle";
 import { ThemeProvider } from "styled-components";
-import theme from "../styles/theme";
+import theme from "../styles/theme/theme";
 import { PrismicProvider } from "@prismicio/react";
 import { client } from "./api/prismic";
 import { Provider } from "react-redux";
@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
   return (
     <SessionProvider session={session}>
       <Provider store={store}>
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={theme.dark}>
           <PrismicProvider client={client}>
             <GlobalStyle />
             <Component {...pageProps} />
