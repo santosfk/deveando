@@ -1,4 +1,4 @@
-export const white = {
+export default {
   colors: {
     background: "#f8f8ff",
     text: "#111111",
