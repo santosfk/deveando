@@ -1,19 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const modalInitialState = {
+const themeInitialState = {
   isOn: false,
 };
 export const slice = createSlice({
-  name: "modalSlice",
-  initialState: modalInitialState,
+  name: "themeSwitcher",
+  initialState: themeInitialState,
   reducers: {
-    setModalState(state, { payload }) {
+    setTheme(state) {
       return {
         ...state,
-        isOn: payload,
+        isOn: !state,
       };
     },
   },
 });
-export const { setModalState } = slice.actions;
+export const { setTheme } = slice.actions;
 export default slice.reducer;
