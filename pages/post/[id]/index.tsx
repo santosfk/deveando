@@ -10,24 +10,28 @@ import {
 import Post from "../../../src/Patterns/post/Post";
 import Header from "../../../src/components/header/Header";
 import { RegisterModal } from "../../../src/components/RegisterModal";
+import { ThemeProvider } from "styled-components";
+import theme from "../../../styles/theme/theme";
 const OpenPost: NextPage = () => {
   const router = useRouter();
   const { id } = router.query;
   const { description, img, title } = useSelector(
     (state: any) => state.blogInfo
   );
+  const { isOn } = useSelector((state: any) => state);
   return (
     <>
-      <Container>
-        <HeadContainer>
-          <Header />
-        </HeadContainer>
-        <PostContainer>
-          <Post size="bg" title={title} img={img} description="" />
-        </PostContainer>
-        <span>{description}</span>
-        <RegisterModal />
-      </Container>
+      <ThemeProvider theme={isOn ? theme.white : theme.dark}>
+        <Container>
+          <HeadContainer>
+            <Header />
+          </HeadContainer>
+          <PostContainer>
+            <Post size="bg" title={title} img={img} description="" />
+          </PostContainer>
+          <span>{description}</span>
+        </Container>
+      </ThemeProvider>
     </>
   );
 };
