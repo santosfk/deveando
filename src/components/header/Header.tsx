@@ -10,13 +10,13 @@ import { GetServerSideProps } from "next";
 import { AnimatePresence } from "framer-motion";
 
 import { useDispatch } from "react-redux";
-import { setModalState } from "../../redux/modalSlice";
+import { setTheme } from "../../redux/themeSwitcher";
 
 export default function Header() {
   const dispatch = useDispatch();
 
   const handleModalIsOpen = () => {
-    dispatch(setModalState(true));
+    dispatch(setTheme());
   };
 
   return (
