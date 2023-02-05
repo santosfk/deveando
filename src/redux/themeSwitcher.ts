@@ -10,7 +10,7 @@ export const slice = createSlice({
     setTheme(state) {
       return {
         ...state,
-        isOn: !state,
+        isOn: !state.isOn,
       };
     },
   },
