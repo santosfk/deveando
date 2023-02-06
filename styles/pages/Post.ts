@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  transition: 0.5s;
+  background: ${({ theme }) => theme.colors.background};
   width: 100%;
-  height: 100vh;
+  height: 100%;
   padding: 0;
   margin: 0;
   display: flex;

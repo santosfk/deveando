@@ -7,19 +7,20 @@ import HomePosts from "../src/components/HomePosts";
 import { useSelector } from "react-redux";
 import { motion } from "framer-motion";
 import { RegisterModal } from "../src/components/RegisterModal";
+import { ThemeProvider } from "styled-components";
+import theme from "../styles/theme/theme";
 
 const Home: NextPage = () => {
-
+  const { isOn } = useSelector((state: any) => state.themeSwitcher);
+  console.log(isOn);
   return (
-    <Container>
-      <NextHead title="deveando" />
-      <Header />
-      <HomePosts />
-          <RegisterModal
-        
-          />
-   
-    </Container>
+    <ThemeProvider theme={isOn ? theme.white : theme.dark}>
+      <Container>
+        <NextHead title="deveando" />
+        <Header />
+        <HomePosts />
+      </Container>
+    </ThemeProvider>
   );
 };
 

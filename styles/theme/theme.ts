@@ -1,9 +1,5 @@
-const theme = {
-  colors: {
-    background: "#f8f8ff",
-    text: "#111111",
-    primary: "#31C0B8",
-  },
-};
+import white from "./white";
+import dark from "./dark";
+import styled from "styled-components";
 
-export default theme;
+export default { white, dark };

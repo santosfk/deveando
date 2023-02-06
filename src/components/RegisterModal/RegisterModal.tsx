@@ -16,7 +16,7 @@ import { database } from "../../service/firebaseConfig";
 import { useDispatch } from "react-redux";
 import { DiGithubFull as GithubLogo } from "react-icons/di";
 import { AnimatePresence, motion } from "framer-motion";
-import { setModalState } from "../../redux/modalSlice";
+
 import { useSelector } from "react-redux";
 export const RegisterModal = ({}: Props) => {
   const { data: session, status } = useSession();
@@ -28,9 +28,7 @@ export const RegisterModal = ({}: Props) => {
   useEffect(() => {
     setEmailInDb();
   }, [userEmail]);
-  const handleCloseModal = () => {
-    dispatch(setModalState(false));
-  };
+
   const handleSignin = (provider: string) => {
     signIn(provider);
   };
@@ -51,7 +49,6 @@ export const RegisterModal = ({}: Props) => {
     setEmailInDb();
   }
 
-  const { isOn } = useSelector((state: any) => state.modalSlice);
   const variants = {
     open: { opacity: 1 },
     closed: { opacity: 0, scale: 0.3 },
@@ -77,12 +74,7 @@ export const RegisterModal = ({}: Props) => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.1, delay: 0.3 }}
         >
-          <XSquare
-            size={42}
-            weight="fill"
-            color="red"
-            onClick={handleCloseModal}
-          />
+          <XSquare size={42} weight="fill" color="red" />
         </ButtonWrapper>
         <PerfilImg
           src={imgSrc}
@@ -140,7 +132,6 @@ export const RegisterModal = ({}: Props) => {
         </Button>
         <Button
           color="red"
-          onClick={handleCloseModal}
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ delay: 0, duration: 0 }}
@@ -155,7 +146,7 @@ export const RegisterModal = ({}: Props) => {
   return (
     <>
       <AnimatePresence>
-        <Container variants={variants} animate={isOn ? "open" : "closed"}>
+        <Container>
           {session?.user ? <LoggedInfos /> : <NologgedInfos />}
         </Container>
       </AnimatePresence>
