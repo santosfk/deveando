@@ -33,13 +33,6 @@ export default function Header() {
           <Moon size={32} weight="fill" color="#d3d3d3" />
         )}
       </div>
-
-      {/* <UserFocus
-        className="user-icon"
-        size={42}
-        weight="fill"
-        
-      /> */}
     </Container>
   );
 }
