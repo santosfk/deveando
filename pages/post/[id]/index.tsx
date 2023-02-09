@@ -18,7 +18,8 @@ const OpenPost: NextPage = () => {
   const { description, img, title } = useSelector(
     (state: any) => state.blogInfo
   );
-  const { isOn } = useSelector((state: any) => state);
+  const { isOn } = useSelector((state: any) => state.themeSwitcher);
+
   return (
     <>
       <ThemeProvider theme={isOn ? theme.white : theme.dark}>
