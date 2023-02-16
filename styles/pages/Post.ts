@@ -12,6 +12,7 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   padding-bottom: 3rem;
+
   span {
     margin-top: 10px;
     max-width: 1000px;
@@ -23,8 +24,12 @@ export const Container = styled.div`
     opacity: 0.8;
   }
 `;
-export const PostContainer = styled.div``;
+export const PostContainer = styled.div`
+  margin-top: 130px;
+`;
 export const HeadContainer = styled.div`
   width: 100%;
   margin-bottom: 3rem;
+  position: fixed;
+  z-index: 8;
 `;
