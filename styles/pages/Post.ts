@@ -33,3 +33,16 @@ export const HeadContainer = styled.div`
   position: fixed;
   z-index: 8;
 `;
+export const LikeComponent = styled.div`
+  width: 400px;
+  border-radius: 50px;
+  background: rgba(57, 57, 57, 0.58);
+  backdrop-filter: blur(2px);
+  padding: 1rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 2;
+  top: 80%;
+`;
