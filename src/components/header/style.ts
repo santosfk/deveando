@@ -4,7 +4,6 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 0.6rem 3rem;
   .user-icon {

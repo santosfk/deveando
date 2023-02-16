@@ -13,10 +13,11 @@ export default createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
   }
   
-  body {
-    height: 100%;
+  body {  
+   
     .swiper-pagination-bullet {
  
     background-color: #A6034F !important;
