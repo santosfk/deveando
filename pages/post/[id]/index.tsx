@@ -15,6 +15,7 @@ import { ThemeProvider } from "styled-components";
 import theme from "../../../styles/theme/theme";
 import { Heart } from "phosphor-react";
 import { useState } from "react";
+import { motion } from "framer-motion";
 const OpenPost: NextPage = () => {
   const router = useRouter();
   const [isliked, setIsLiked] = useState<boolean>(false);
@@ -36,12 +37,20 @@ const OpenPost: NextPage = () => {
           </PostContainer>
           <span>{description}</span>
           <LikeComponent>
-            <Heart
-              onClick={() => setIsLiked((old) => !old)}
-              color="red"
-              weight={isliked ? "fill" : "regular"}
-              size={30}
-            />
+            <motion.span
+              whileHover={{ scale: 1.2, y: -10 }}
+              whileTap={{
+                scale: 0.3,
+                borderRadius: "100%",
+              }}
+            >
+              <Heart
+                onClick={() => setIsLiked((old) => !old)}
+                color={isliked ? "black" : "red"}
+                weight="fill"
+                size={30}
+              />
+            </motion.span>
           </LikeComponent>
         </Container>
       </ThemeProvider>
