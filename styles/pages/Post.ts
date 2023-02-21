@@ -35,8 +35,8 @@ export const HeadContainer = styled.div`
 `;
 export const LikeComponent = styled.div`
   width: 400px;
-  border-radius: 50px;
-  background: rgba(57, 57, 57, 0.58);
+  border-radius: 20px;
+  background: rgba(57, 57, 57, 0.3);
   backdrop-filter: blur(2px);
   padding: 1rem 3rem;
   display: flex;
@@ -45,4 +45,8 @@ export const LikeComponent = styled.div`
   position: fixed;
   z-index: 2;
   top: 80%;
+  svg {
+    scale: 1.1;
+    transition: 0.3s;
+  }
 `;
