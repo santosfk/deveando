@@ -38,7 +38,7 @@ const OpenPost: NextPage = () => {
           <span>{description}</span>
           <LikeComponent
             initial={{ width: "150px" }}
-            animate={{ width: "300px" }}
+            animate={{ width: "400px" }}
             transition={{
               type: "spring",
               duration: 3,
