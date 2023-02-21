@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { motion } from "framer-motion";
 export const Container = styled.div`
   transition: 0.5s;
   background: ${({ theme }) => theme.colors.background};
@@ -33,7 +33,7 @@ export const HeadContainer = styled.div`
   position: fixed;
   z-index: 8;
 `;
-export const LikeComponent = styled.div`
+export const LikeComponent = styled(motion.div)`
   width: 400px;
   border-radius: 20px;
   background: rgba(57, 57, 57, 0.3);
@@ -44,7 +44,7 @@ export const LikeComponent = styled.div`
   justify-content: center;
   position: fixed;
   z-index: 2;
-  top: 80%;
+  top: 30%;
   svg {
     scale: 1.1;
     transition: 0.3s;
