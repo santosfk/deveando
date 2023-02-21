@@ -36,7 +36,16 @@ const OpenPost: NextPage = () => {
             <Post size="bg" title={title} img={img} description="" />
           </PostContainer>
           <span>{description}</span>
-          <LikeComponent>
+          <LikeComponent
+            initial={{ width: "150px" }}
+            animate={{ width: "300px" }}
+            transition={{
+              type: "spring",
+              duration: 3,
+              stiffness: 260,
+              damping: 20,
+            }}
+          >
             <motion.span
               whileHover={{ scale: 1.2, y: -10 }}
               whileTap={{
