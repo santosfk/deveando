@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import type { NextPage } from "next";
 import { useSelector } from "react-redux";
@@ -16,14 +16,31 @@ import theme from "../../../styles/theme/theme";
 import { Heart } from "phosphor-react";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { getHearts, addHeart } from "../../api/heart";
 const OpenPost: NextPage = () => {
   const router = useRouter();
   const [isliked, setIsLiked] = useState<boolean>(false);
+  const [hearts, setHearts] = useState<number>();
   const { id } = router.query;
   const { description, img, title } = useSelector(
     (state: any) => state.blogInfo
   );
   const { isOn } = useSelector((state: any) => state.themeSwitcher);
+  const handleGetLike = async () => {
+    const likeHeart = await getHearts();
+    setHearts(likeHeart);
+  };
+  const handleAddLike = async () => {
+    const heartsValue = hearts ? hearts : 0 + 1;
+    await addHeart(heartsValue);
+  };
+  const handleHeartClicked = () => {
+    setIsLiked((old) => !old);
+    handleAddLike();
+  };
+  useEffect(() => {
+    handleGetLike();
+  }, []);
 
   return (
     <>
@@ -54,8 +71,8 @@ const OpenPost: NextPage = () => {
               }}
             >
               <Heart
-                onClick={() => setIsLiked((old) => !old)}
-                color={isliked ? "black" : "red"}
+                onClick={handleHeartClicked}
+                color={isliked ? "red" : "black"}
                 weight="fill"
                 size={30}
               />
