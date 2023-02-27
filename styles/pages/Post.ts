@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { motion } from "framer-motion";
 export const Container = styled.div`
   transition: 0.5s;
   background: ${({ theme }) => theme.colors.background};
@@ -32,4 +32,25 @@ export const HeadContainer = styled.div`
   margin-bottom: 3rem;
   position: fixed;
   z-index: 8;
+`;
+export const LikeComponent = styled(motion.div)`
+  border-radius: 20px;
+  background: rgba(57, 57, 57, 0.3);
+  backdrop-filter: blur(2px);
+  padding: 1rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  position: fixed;
+  z-index: 2;
+  top: 30%;
+  svg {
+    scale: 1.1;
+    transition: 0.3s;
+  }
+  span {
+    font-size: 1.5rem;
+    color: whitesmoke;
+  }
 `;

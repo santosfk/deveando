@@ -8,16 +8,25 @@ import { client } from "./api/prismic";
 import { Provider, useSelector } from "react-redux";
 import store from "../src/redux/store";
 import { SessionProvider } from "next-auth/react";
-
+import {
+  useQuery,
+  useMutation,
+  useQueryClient,
+  QueryClient,
+  QueryClientProvider,
+} from "react-query";
+import { queryClient } from "./api/queryClient";
 function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
   return (
     <SessionProvider session={session}>
-      <Provider store={store}>
-        <PrismicProvider client={client}>
-          <GlobalStyle />
-          <Component {...pageProps} />
-        </PrismicProvider>
-      </Provider>
+      <QueryClientProvider client={queryClient}>
+        <Provider store={store}>
+          <PrismicProvider client={client}>
+            <GlobalStyle />
+            <Component {...pageProps} />
+          </PrismicProvider>
+        </Provider>
+      </QueryClientProvider>
     </SessionProvider>
   );
 }

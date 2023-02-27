@@ -12,7 +12,7 @@ import {
 import { XSquare } from "phosphor-react";
 import { GetServerSideProps } from "next/types";
 import { collection, addDoc } from "firebase/firestore";
-import { database } from "../../service/firebaseConfig";
+import { database } from "../../firebase/firebaseConfig";
 import { useDispatch } from "react-redux";
 import { DiGithubFull as GithubLogo } from "react-icons/di";
 import { AnimatePresence, motion } from "framer-motion";
