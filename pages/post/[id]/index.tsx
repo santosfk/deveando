@@ -51,7 +51,7 @@ const OpenPost: NextPage = () => {
   };
 
   const handleHeartClicked = () => {
-    setIsLiked((old) => !old);
+    setIsLiked(true);
     handleAddLike();
     console.log(hearts?.hearts);
   };
