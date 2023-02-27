@@ -16,31 +16,45 @@ import theme from "../../../styles/theme/theme";
 import { Heart } from "phosphor-react";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { getHearts, addHeart } from "../../api/heart";
+import { getHearts, addHeart, updateHeart } from "../../api/heart";
+import { Heart as IHeart } from "../../../src/types/heart";
+import { useMutation, useQuery } from "react-query";
+import { queryClient } from "../../api/queryClient";
 const OpenPost: NextPage = () => {
   const router = useRouter();
   const [isliked, setIsLiked] = useState<boolean>(false);
-  const [hearts, setHearts] = useState<number>();
+  const [hearts, setHearts] = useState<IHeart>();
   const { id } = router.query;
   const { description, img, title } = useSelector(
     (state: any) => state.blogInfo
   );
   const { isOn } = useSelector((state: any) => state.themeSwitcher);
-  const handleGetLike = async () => {
-    const likeHeart = await getHearts();
-    setHearts(likeHeart);
-  };
+  const query = useQuery("getLikes", getHearts, {
+    onSuccess(data) {
+      data?.map((item) => {
+        setHearts(item);
+      });
+    },
+  });
+  const mutation = useMutation((item: IHeart) => updateHeart(item), {
+    onSuccess() {
+      queryClient.invalidateQueries("getLikes");
+    },
+  });
   const handleAddLike = async () => {
-    const heartsValue = hearts ? hearts : 0 + 1;
-    await addHeart(heartsValue);
+    const heartsValue = hearts?.hearts ? hearts?.hearts + 1 : 0 + 1;
+    const newHeart: IHeart = {
+      hearts: heartsValue,
+      id: "1",
+    };
+    mutation.mutate(newHeart);
   };
+
   const handleHeartClicked = () => {
     setIsLiked((old) => !old);
     handleAddLike();
+    console.log(hearts?.hearts);
   };
-  useEffect(() => {
-    handleGetLike();
-  }, []);
 
   return (
     <>
@@ -63,6 +77,7 @@ const OpenPost: NextPage = () => {
               damping: 20,
             }}
           >
+            <span>{hearts?.hearts}</span>
             <motion.span
               whileHover={{ scale: 1.2, y: -10 }}
               whileTap={{
