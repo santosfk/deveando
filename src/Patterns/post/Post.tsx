@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { useEffect } from "react";
-import { Container, Title, ImageContent } from "./style";
+import { Container, Title, ImageContent, InfoWrapper } from "./style";
 import { setInfo } from "../../redux/blogInfoSlice";
 
 import Link from "next/link";
@@ -22,18 +22,11 @@ export default function Post({ size, title, img, description }: Props) {
     dispatch(setInfo(dataPost));
   };
   return (
-    <Link href={`post/${title}`}>
-      <Container size={size} onClick={() => setDataPost()}>
+    <Container size={size} onClick={() => setDataPost()}>
+      <ImageContent size={size} src={img} alt="" />
+      <InfoWrapper>
         <Title size={size}>{title}</Title>
-        <ImageContent
-          size={size}
-          src={img}
-          style={{
-            position: "absolute",
-          }}
-          alt=""
-        />
-      </Container>
-    </Link>
+      </InfoWrapper>
+    </Container>
   );
 }
